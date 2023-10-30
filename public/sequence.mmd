@@ -1,0 +1,21 @@
+sequenceDiagram
+  participant User
+  participant Browser
+  participant Website
+  participant API
+
+  Note over User, Browser: User opens the browser
+
+  User->>Browser: Navigate to Website
+  Browser->>Website: Send HTTP request to load website
+
+  Note over Website: Website loads and displays content
+
+  User->>Browser: Interact with Website (e.g., click a button)
+  Browser->>Website: Trigger API request
+
+  Website->>API: Send API request
+  API-->>Website: Respond with API data
+
+  Website-->>Browser: Update UI with API data
+  Browser-->>User: Display updated content

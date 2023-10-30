@@ -1,0 +1,21 @@
+gitGraph
+    commit tag: "1.0.1"
+    commit id: "Feature Needed" type: HIGHLIGHT
+    branch feature
+    checkout feature
+    commit
+    commit  id: "Issue Found" type: REVERSE
+    branch issue
+    checkout issue
+    commit
+    checkout main
+    commit
+    checkout issue
+    merge main
+    commit
+    checkout feature
+    merge issue id: "Issue Resolved"
+    merge main
+    checkout main
+    commit
+    merge feature id: "Feature Resolved"tag: "1.1.0"

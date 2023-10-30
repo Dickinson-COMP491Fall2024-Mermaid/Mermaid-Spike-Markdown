@@ -1,0 +1,29 @@
+flowchart TD
+    M{Math} --> 170
+    170[Math 170] --> 211[Math 211]
+                            --> 332[Comp 332]
+    211 --> 314[Comp 314]
+    211 -.-> 2/3xx_Elective([2/3xx Elective]) -.-> E
+
+            P{Programming & Scientific Core} -->130[Comp 130]
+                                            --> 132[Comp 132]
+                                            --> 232[Comp 232]
+                                            --> 332
+    132 --> 314
+
+            E([Electives]) --> 203 --> 213 --> 241
+            E --> 331 --> 356 --> 364 --> 378 --> 393
+
+            T{Tools & Practices} --> 190[Comp 190]
+            190 --> 290[Comp 290]
+            290 --> 390[Comp 390]
+            290 --> 491[Comp 491]
+                --> 492[Comp 492]
+
+            A{Abstractions & Systems} --> 256[Comp 256]
+            132 --> 256
+                -.-> AB([Abstract Implementation]) --> 352[Comp 352]
+                AB --> ?
+                AB --> 354[Comp 354]
+
+            232 --> AB
