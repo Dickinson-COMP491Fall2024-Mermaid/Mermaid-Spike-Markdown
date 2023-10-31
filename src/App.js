@@ -10,6 +10,8 @@ const App = () => {
   const [pie, setPie] = useState('');
   const [quadrant, setQuadrant] = useState('');
   const [sequence, setSequence] = useState('');
+  const [stateDiagram, setStateDiagram] = useState('');
+  const [journey, setJourney] = useState('');
 
   useEffect(() => {
     const fetchFile = async (file) => {
@@ -32,6 +34,8 @@ const App = () => {
     fetchFile('/pie.mmd').then((content) => setPie(content));
     fetchFile('/quadrant.mmd').then((content) => setQuadrant(content));
     fetchFile('/sequence.mmd').then((content) => setSequence(content));
+    fetchFile('/stateDiagram.mmd').then((content) => setStateDiagram(content));
+    fetchFile('/journey.mmd').then((content) => setJourney(content));
   }, []);
   return (
   <div>
@@ -62,6 +66,14 @@ const App = () => {
     <div>
       <h1>Sequence Diagram</h1>
       {sequence && <Mermaid chart={sequence} />}
+    </div>
+    <div>
+      <h1>State Diagram</h1>
+      {stateDiagram && <Mermaid chart ={stateDiagram} />}
+    </div>
+    <div>
+      <h1>User Journey</h1>
+      {journey && <Mermaid chart ={journey} />}
     </div>
   </div>
   );
