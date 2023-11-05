@@ -1,0 +1,43 @@
+sequenceDiagram
+    %% Defining all participants
+    actor JM as MacCormick
+    actor CG as Chris
+    actor ML as Marcel
+    actor MK as Michael
+    actor SA as Souhe
+    actor AL as Andrew
+   
+    activate JM
+    par Professor's Question
+        JM->>CG: Please explain your group's plan
+    and
+        JM->>ML: Please explain your group's plan
+    and
+        JM->>MK: Please explain your group's plan
+    and
+        JM->>SA: Please explain your group's plan
+    and
+        JM->>AL: Please explain your group's plan
+
+    end
+    deactivate JM
+    ML ->> JM: Maybe something with ML
+    CG ->> JM: Maybe something ambitious like a new component
+    MK ->> JM: Maybe something with a website
+    SA ->> JM: Learning about JS and TS
+    AL ->> JM: Learning about JS and TS
+
+    
+
+    CG ->> ML: What would you like to do? 
+    ML ->> CG: The website sounds straightforward yet easy
+    par Michael's Interest
+        MK ->> ML: That sounds cool too, can I join?
+    and
+        MK ->> CG: That sounds cool too, can I join?
+    end
+
+    ML ->> MK: Sure
+    ML ->> CG: Do you want to join our team? 
+    CG ->> ML: Sure
+    

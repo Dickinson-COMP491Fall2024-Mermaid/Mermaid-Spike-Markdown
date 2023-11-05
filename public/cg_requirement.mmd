@@ -1,0 +1,30 @@
+requirementDiagram
+
+    element Player_entity {
+    type: object
+    }
+
+    requirement movement {
+    id: 1
+    text: Movements and collision systems
+    risk: high
+    verifymethod: Test
+    }
+
+    requirement combat_system {
+    id: 2
+    text: Weapon stats & animations
+    risk: medium
+    verifymethod: test
+    }
+
+    requirement inventory_system {
+    id: 3
+    text: Hold items and usage
+    risk: low
+    verifymethod: test
+    }
+
+    Player_entity <- satisfies - movement
+    Player_entity <- satisfies - combat_system
+    Player_entity <- satisfies - inventory_system
