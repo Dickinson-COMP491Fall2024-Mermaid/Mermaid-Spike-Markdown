@@ -27,15 +27,15 @@ const App = () => {
         return '';
       }
     };
-    fetchFile('/flowchart.mmd').then((content) => setFlowChart(content));
-    fetchFile('/mindmap.mmd').then((content) => setMindMap(content));
-    fetchFile('/gitGraph.mmd').then((content) => setGitGraph(content));
-    fetchFile('/gantt.mmd').then((content) => setGantt(content));
-    fetchFile('/pie.mmd').then((content) => setPie(content));
-    fetchFile('/quadrant.mmd').then((content) => setQuadrant(content));
-    fetchFile('/sequence.mmd').then((content) => setSequence(content));
-    fetchFile('/stateDiagram.mmd').then((content) => setStateDiagram(content));
-    fetchFile('/journey.mmd').then((content) => setJourney(content));
+    fetchFile('/mk_flowchart.mmd').then((content) => setFlowChart(content));
+    fetchFile('/mk_mindmap.mmd').then((content) => setMindMap(content));
+    fetchFile('/mk_gitGraph.mmd').then((content) => setGitGraph(content));
+    fetchFile('/mk_gantt.mmd').then((content) => setGantt(content));
+    fetchFile('/mk_pie.mmd').then((content) => setPie(content));
+    fetchFile('/mk_quadrant.mmd').then((content) => setQuadrant(content));
+    fetchFile('/mk_sequence.mmd').then((content) => setSequence(content));
+    fetchFile('/mk_stateDiagram.mmd').then((content) => setStateDiagram(content));
+    fetchFile('/mk_journey.mmd').then((content) => setJourney(content));
   }, []);
   return (
   <div>

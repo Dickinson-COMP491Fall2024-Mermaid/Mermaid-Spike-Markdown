@@ -1,0 +1,25 @@
+classDiagram
+  class CommonClass {
+    +currentState: State
+    +transitionTo(newState: State): void
+  }
+
+  class State {
+    +handleState(): void
+  }
+
+  class ConcreteStateA {
+    +handleState(): void
+  }
+
+  class ConcreteStateB {
+    +handleState(): void
+  }
+
+  CommonClass --> State
+  CommonClass --> ConcreteStateA
+  CommonClass --> ConcreteStateB
+  CommonClass : +transitionTo(newState: State): void
+  State : +handleState(): void
+  ConcreteStateA : +handleState(): void
+  ConcreteStateB : +handleState(): void
