@@ -1,0 +1,83 @@
+erDiagram    
+    player }o..o{ quests : "can obtain"
+    npc }o..o{ quests : "can offer"
+    player }o..o{ item : "can obtain"
+    item ||..|| weapons : "can be"
+    item ||..|| gear : "can be"
+    item ||..|| consumables : "can be"
+    player }o..o{ enemy : "can fight"
+    enemy ||..|| thief : "can be"
+    thief ||..|| weapons : "can have"
+    thief }o..o{ gear : "can have"
+    thief }o..o{ consumables : "can have"
+    quests }o..o{ objectives : "have"
+
+    player {
+        string name 
+        doublr health 
+        double hunger
+        string[] inventory
+    }
+
+    quests {
+        Boolean required 
+        Boolean completed
+        string description 
+        npc owner
+        objectives[] questObj
+    }
+
+    npc {
+        Boolean friendly 
+        string name 
+        double health
+        quests[] npcQuests
+    }
+
+    objectives {
+        string description 
+        Boolean completed
+    }
+
+    item {
+        string name
+        string description
+        int quantity 
+        int rarity
+    }
+
+    weapons {
+        string name
+        string weaponType
+        int rarity
+    }
+
+    gear {
+        string name
+        double durability
+        int rarity
+    }
+
+    consumables {
+        string name
+        string description
+        int quantity
+    }
+
+    consumables {
+        string name
+        string description
+        int quantity
+    }
+
+    enemy {
+        string name
+        int difficulty
+        attacks[] movePool
+    }
+
+    thief {
+        string name
+        string faction
+        Boolean greaterEnemy
+    }

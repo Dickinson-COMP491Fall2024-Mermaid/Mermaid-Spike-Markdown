@@ -1,0 +1,48 @@
+gitGraph TB:
+    commit id: "Misc."
+    commit id: "Misc."
+    branch refactor_EBC
+    checkout refactor_EBC
+    commit id: "Generalization"
+    checkout main
+    commit id: "Resolve Summary Table"
+    checkout refactor_EBC
+    commit id: "Updated functionnality"
+    checkout main
+    commit id: "Updated API"
+    checkout refactor_EBC
+    commit id: "Updated tests"
+    checkout main
+    merge refactor_EBC id: "Banner Component" tag: "complete" type: HIGHLIGHT
+    commit id: "Update VNC"
+    checkout main
+    branch updateSReport
+    branch updateTReport
+    branch updateSInput
+    checkout updateSReport
+    commit id: "Removing EBC"
+    checkout main
+    commit id: "Fixed database bug"
+    commit id: "Fixed timestamp error"
+    commit id: "Formatting errors fixed"
+    checkout updateTReport
+    commit id: "Removed EBC from TReport"
+    commit id: "Added BC"
+    commit id: "TR tests updated"
+    checkout main
+    commit id: "Updated documentation"
+    commit id: "Added new APIs."
+    commit id: "Resolved promise error"
+    checkout updateSReport
+    commit id: "Updated w/BC"
+    commit id: "Updated sReport tests"
+    checkout main
+    merge updateSReport id: "Removed EBC from SReport" tag: "completed" type: HIGHLIGHT
+    merge updateTReport id: "Removed EBC from TRreport" tag: "complete" type: HIGHLIGHT
+    checkout updateSInput
+    commit id: "Take out EBC"
+    commit id: "Integrate BC"
+    commit id: "New tests for SInput"
+    checkout main
+    commit id: "Docker updates"
+    merge updateSInput id: "Removed EBC from sInput" tag: "complete" type: HIGHLIGHT

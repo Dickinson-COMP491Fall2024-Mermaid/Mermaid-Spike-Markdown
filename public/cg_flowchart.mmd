@@ -1,0 +1,25 @@
+flowchart TD
+    A{{"fa:fa-gamepad Nintendo Switch"}} -->|Turn it on| B("fa:fa-power-off Boot-Up Game")
+    
+    style C fill:#6ea6f0,stroke:#333,stroke-width:4px
+    style D fill:#6ea6f0,stroke:#333,stroke-width:4px
+    style E fill:#6ea6f0,stroke:#333,stroke-width:4px
+    B ----> C(["fa:fa-user Single Player"])
+    B ----> D(["fa:fa-users Multiplayer"])
+    B ----> E(["fa:fa-wifi Online Play"])
+
+    style F fill:#29b00e,stroke:#333,stroke-width:4px
+    style G fill:#29b00e,stroke:#333,stroke-width:4px
+    style H fill:#29b00e,stroke:#333,stroke-width:4px
+    style I fill:#29b00e,stroke:#333,stroke-width:4px
+    C & E -----> F("fa:fa-flag-checkered Grand Prix")
+    C ----> G("fa:fa-clock Time Trials")
+    C ----> H("fa:fa-bomb VS Battle")
+    C ----> I("fa:fa-pray Battle")
+
+    D ----> |How many players?| F & H & I
+
+    style J fill:#FF0000,stroke:#333,stroke-width:4px
+    F & G & H & I----> J((("fa:fa-angry Angry "))) 
+
+    J ----> |Get mad, turn off Switch| A

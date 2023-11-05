@@ -1,0 +1,12 @@
+stateDiagram-v2
+    %% Styling
+    classDef terminated fill:#89e048,color:white,font-weight:bold,stroke-width:2px,stroke:green
+    classDef execute fill:#df6325,color:white,font-weight:bold,stroke-width:2px,stroke:orange
+
+    q0 --> q0: CGTA, R
+    q0 --> q1: _, L
+    q1 --> q1: CGA_, L
+    q1 --> q2: T-->A, S
+
+    class q0 execute
+    Class q2 terminated
