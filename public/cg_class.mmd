@@ -1,0 +1,61 @@
+classDiagram
+    SelfDriving_Car <|-- Selfish_Car : Implemens
+    SelfDriving_Car <|-- Utilitarian_Car : Implemens
+    SelfDriving_Car <|-- Random_Car : Implemens
+    SelfDriving_Car <|-- Evil_Car : Implemens
+    Evil_Car <|-- SuperEvil_Car : Implemens
+    SelfDriving_Car <|-- Good_Car : Implemens
+    
+    %% First, define the attributes and methods of self driving car
+    note for SelfDriving_Car "Inspired by comp130 self driving car lab"
+    class SelfDriving_Car{
+        <<Class>>
+        +int passengers
+        +String currentLane
+        +int left_barrier_exists()
+        +int left_num_pedestrians()
+        +int left_crosswalk_active()
+        +int right_barrier_exists()
+        +int right_num_pedestrians()
+        +int right_crosswalk_active()
+        +int swerve()
+    }
+    class Selfish_Car {
+        <<Subclass>>
+        +num_dead()
+    }
+
+    class Utilitarian_Car {
+        <<Subclass>>
+        +least_dead()
+    }
+    class Random_Car {
+        <<Subclass>>
+        +random_choice()
+    }
+
+    class Good_Car {
+        <<Subclass>>
+        +create_alternate_reality_with_no_deaths()
+        +teleport()
+    }
+
+    namespace BannedCars {
+        class Evil_Car {
+            <<Subclass>>
+            +int currentSpeedLimit
+            +exceed_speed_limit()
+            +most_dead()
+        }
+        class SuperEvil_Car {
+            <<Abomination>>
+            +double lawsBroken
+            +run_red_light()
+            +tailgate()
+            +turn_on_high_beams()
+            +excessive_honk()
+            +no_yield()
+            +exceed_speed_limit()
+            +most_dead()
+        }
+    }
