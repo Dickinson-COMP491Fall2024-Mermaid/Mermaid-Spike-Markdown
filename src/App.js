@@ -52,7 +52,7 @@ const App = () => {
       </Grid>
       
       <Grid item xs>
-        <Chartcard chartpreview="/charts_preview/gitchart.png" name="git flow">
+        <Chartcard chartpreview="/charts_preview/gitchart.png" name="Git graph">
         </Chartcard>
       </Grid>
       
@@ -62,6 +62,14 @@ const App = () => {
       </Grid>
       <Grid item xs>
         <Chartcard chartpreview="/charts_preview/piechart.png" name="Class Pie Chart">
+        </Chartcard>
+      </Grid>
+      <Grid item xs>
+        <Chartcard chartpreview="/charts_preview/quadrant.png" name="Class Quadrant">
+        </Chartcard>
+      </Grid>
+      <Grid item xs>
+        <Chartcard chartpreview="/charts_preview/sankey.png" name="Game Sankey">
         </Chartcard>
       </Grid>
     </Grid>

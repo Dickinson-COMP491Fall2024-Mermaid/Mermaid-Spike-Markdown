@@ -3,7 +3,7 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'My Charts', href: '#', current: true },
+  { name: 'My Charts', href: '/', current: true },
   { name: 'Create New Chart', href: '#', current: false },
   { name: 'Profile', href: '#', current: false },
   { name: 'Explore', href: '#', current: false },
@@ -36,7 +36,7 @@ export default function Example() {
                 <div className="flex flex-shrink-0 items-center">
                   <img
                     className="h-8 w-auto"
-                    src="logo.png"
+                    src="mermaidlogo.png"
                     alt="Your Company"
                   />
                 </div>
