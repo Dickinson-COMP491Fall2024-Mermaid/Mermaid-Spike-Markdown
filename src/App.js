@@ -1,6 +1,9 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import Mermaid from './mermaid';
+import Mermaid from './components/mermaid';
+import Chartcard from './components/chartcard';
+import Container from "@mui/material/Container";
+import Grid from '@mui/material/Grid';
 
 const App = () => {
   const [flowchart, setFlowChart] = useState('');
@@ -27,20 +30,43 @@ const App = () => {
         return '';
       }
     };
-    fetchFile('/mk_flowchart.mmd').then((content) => setFlowChart(content));
-    fetchFile('/mk_mindmap.mmd').then((content) => setMindMap(content));
-    fetchFile('/mk_gitGraph.mmd').then((content) => setGitGraph(content));
-    fetchFile('/mk_gantt.mmd').then((content) => setGantt(content));
-    fetchFile('/mk_pie.mmd').then((content) => setPie(content));
-    fetchFile('/mk_quadrant.mmd').then((content) => setQuadrant(content));
-    fetchFile('/mk_sequence.mmd').then((content) => setSequence(content));
-    fetchFile('/mk_stateDiagram.mmd').then((content) => setStateDiagram(content));
-    fetchFile('/mk_journey.mmd').then((content) => setJourney(content));
+    fetchFile('/mermaid_charts/mk_flowchart.mmd').then((content) => setFlowChart(content));
+    fetchFile('/mermaid_charts/mk_mindmap.mmd').then((content) => setMindMap(content));
+    fetchFile('/mermaid_charts/mk_gitGraph.mmd').then((content) => setGitGraph(content));
+    fetchFile('/mermaid_charts/mk_gantt.mmd').then((content) => setGantt(content));
+    fetchFile('/mermaid_charts/mk_pie.mmd').then((content) => setPie(content));
+    fetchFile('/mermaid_charts/mk_quadrant.mmd').then((content) => setQuadrant(content));
+    fetchFile('/mermaid_charts/mk_sequence.mmd').then((content) => setSequence(content));
+    fetchFile('/mermaid_charts/mk_stateDiagram.mmd').then((content) => setStateDiagram(content));
+    fetchFile('/mermaid_charts/mk_journey.mmd').then((content) => setJourney(content));
   }, []);
   return (
   <div>
     <div>
-      <h1>Computer Science Curriculum</h1>
+    
+    <Container maxWidth="lg" sx={{borderWidth: 10, padding: 10}} >
+    <Grid container sx={{flexGrow: 1}} spacing={2}>
+      <Grid item xs>
+        <Chartcard chartpreview="/charts_preview/gantt.png" name="MyDay">
+        </Chartcard>
+      </Grid>
+      
+      <Grid item xs>
+        <Chartcard chartpreview="/charts_preview/gitchart.png" name="git flow">
+        </Chartcard>
+      </Grid>
+      
+      <Grid item xs>
+        <Chartcard chartpreview="/charts_preview/flowchart.png" name="COMP curriculum">
+        </Chartcard>
+      </Grid>
+      <Grid item xs>
+        <Chartcard chartpreview="/charts_preview/piechart.png" name="Class Pie Chart">
+        </Chartcard>
+      </Grid>
+    </Grid>
+    </Container>
+      {/* <h1>Computer Science Curriculum</h1>
       {flowchart && <Mermaid chart={flowchart} />}
     </div>
     <div>    
@@ -73,7 +99,7 @@ const App = () => {
     </div>
     <div>
       <h1>User Journey</h1>
-      {journey && <Mermaid chart ={journey} />}
+      {journey && <Mermaid chart ={journey} />} */}
     </div>
   </div>
   );
