@@ -34,7 +34,7 @@ export default function MediaCard(props) {
       <CardActions>
         <Button size="small">Share</Button>
         <Button size="small" href={namewithoutspace}>View Chart</Button>
-        <Button size="small">Edit Chart</Button>
+        <Button size="small" href={props.editlink} target="_blank">Edit Chart</Button>
       </CardActions>
     </Card>
   );
