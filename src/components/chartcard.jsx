@@ -9,6 +9,7 @@ import Typography from '@mui/material/Typography';
 
 
 export default function MediaCard(props) {
+  const namewithoutspace = props.name.replace(/\s+/g, '')
   return (
     <Card 
       sx={{ 
@@ -26,14 +27,14 @@ export default function MediaCard(props) {
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           <div class="font-bold">
-            {props.name}
+            {props.name}  
           </div>
         </Typography>
       </CardContent>
       <CardActions>
         <Button size="small">Share</Button>
-        <Button size="small">View Chart</Button>
-        <Button size="small">Edit Chart</Button>
+        <Button size="small" href={namewithoutspace}>View Chart</Button>
+        <Button size="small" href={props.editlink} target="_blank">Edit Chart</Button>
       </CardActions>
     </Card>
   );
